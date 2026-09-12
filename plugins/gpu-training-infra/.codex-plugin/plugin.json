@@ -1,0 +1,33 @@
+{
+  "name": "gpu-training-infra",
+  "version": "0.1.1",
+  "description": "优化模型及训练代码的工程实现与执行效率",
+  "author": {
+    "name": "nnu-sky",
+    "url": "https://github.com/nnu-sky"
+  },
+  "homepage": "https://github.com/nnu-sky/skills",
+  "repository": "https://github.com/nnu-sky/skills",
+  "license": "MIT",
+  "keywords": [
+    "pytorch",
+    "cuda",
+    "gpu",
+    "training",
+    "performance"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "模型工程优化",
+    "shortDescription": "优化模型及训练代码的工程实现与执行效率",
+    "longDescription": "仅在明确要求模型工程优化时使用，按实测结果改进训练代码。",
+    "developerName": "nnu-sky",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "使用 $gpu-training-infra 对模型及训练代码进行工程优化。"
+  }
+}

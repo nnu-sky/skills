@@ -1,0 +1,188 @@
+mixed-port: 7897
+socks-port: 7898
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9097
+secret: ''
+
+tun:
+  enable: false
+
+proxy-providers:
+  第一订阅:
+    type: http
+    url: https://example.invalid/first-subscription
+    path: ./providers/first.yaml
+    interval: 86400
+    header:
+      User-Agent:
+        - clash.meta
+    exclude-filter: (?i)(剩余|流量|重置|套餐|到期|官网|公告|过滤|客服|traffic|expire|subscription)
+    override:
+      additional-prefix: '[来源一] '
+  第二订阅:
+    type: http
+    url: https://example.invalid/second-subscription
+    path: ./providers/second.yaml
+    interval: 86400
+    header:
+      User-Agent:
+        - clash.meta
+    exclude-filter: (?i)(剩余|流量|重置|套餐|到期|官网|公告|过滤|客服|traffic|expire|subscription)
+    override:
+      additional-prefix: '[来源二] '
+
+proxy-groups:
+  - name: 第二来源智能自动
+    type: url-test
+    use: [第二订阅]
+    url: https://chatgpt.com/backend-api/codex/models
+    expected-status: 200/301/302/303/307/308/401/405
+    interval: 1800
+    lazy: false
+    timeout: 3000
+    tolerance: 200
+  - name: 第二来源通用自动
+    type: url-test
+    use: [第二订阅]
+    url: https://cp.cloudflare.com/generate_204
+    expected-status: 204
+    interval: 1800
+    lazy: false
+    timeout: 3000
+    tolerance: 200
+  - name: 人工智能自动
+    type: url-test
+    use: [第一订阅]
+    proxies: [第二来源智能自动]
+    url: https://chatgpt.com/backend-api/codex/models
+    expected-status: 200/301/302/303/307/308/401/405
+    interval: 600
+    lazy: false
+    timeout: 10000
+    tolerance: 200
+  - name: 谷歌自动
+    type: url-test
+    use: [第一订阅]
+    proxies: [DIRECT, 第二来源通用自动]
+    url: https://www.google.com/generate_204
+    expected-status: 204
+    interval: 600
+    lazy: false
+    timeout: 10000
+    tolerance: 200
+  - name: GitHub核心自动
+    type: url-test
+    use: [第一订阅]
+    proxies: [DIRECT, 第二来源通用自动]
+    url: https://github.com/robots.txt
+    expected-status: 200
+    interval: 600
+    lazy: false
+    timeout: 10000
+    tolerance: 200
+  - name: GitHub内容自动
+    type: url-test
+    use: [第一订阅]
+    proxies: [DIRECT, 第二来源通用自动]
+    url: https://raw.githubusercontent.com/github/gitignore/main/Global/macOS.gitignore
+    expected-status: 200
+    interval: 600
+    lazy: false
+    timeout: 10000
+    tolerance: 200
+  - name: GitHub归档自动
+    type: url-test
+    use: [第一订阅]
+    proxies: [DIRECT, 第二来源通用自动]
+    url: https://codeload.github.com/octocat/Hello-World/zip/refs/heads/master
+    expected-status: 200
+    interval: 600
+    lazy: false
+    timeout: 10000
+    tolerance: 200
+  - name: 学术外网自动
+    type: url-test
+    use: [第一订阅]
+    proxies: [DIRECT, 第二来源通用自动]
+    url: https://arxiv.org/robots.txt
+    expected-status: 200
+    interval: 600
+    lazy: false
+    timeout: 10000
+    tolerance: 200
+  - name: 默认外网自动
+    type: url-test
+    use: [第一订阅]
+    proxies: [第二来源通用自动]
+    url: https://cp.cloudflare.com/generate_204
+    expected-status: 204
+    interval: 600
+    lazy: false
+    timeout: 10000
+    tolerance: 200
+
+rule-providers:
+  人工智能分类:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/ai.mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-!cn.mrs
+    interval: 86400
+  GitHub分类:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/github.mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs
+    interval: 86400
+  Google分类:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/google.mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs
+    interval: 86400
+  学术分类:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/scholar.mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-scholar-!cn.mrs
+    interval: 86400
+  中国域名:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/cn.mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs
+    interval: 86400
+
+rules:
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,cluster.local,DIRECT
+  - DOMAIN-SUFFIX,svc,DIRECT
+  - DOMAIN-SUFFIX,pypi.org,DIRECT
+  - DOMAIN-SUFFIX,pythonhosted.org,DIRECT
+  - DOMAIN-SUFFIX,repo.anaconda.com,DIRECT
+  - DOMAIN-SUFFIX,download.pytorch.org,DIRECT
+  - DOMAIN-SUFFIX,developer.download.nvidia.com,DIRECT
+  - DOMAIN-SUFFIX,huggingface.co,默认外网自动
+  - DOMAIN-SUFFIX,hf.co,默认外网自动
+  - DOMAIN-SUFFIX,npmjs.org,默认外网自动
+  - RULE-SET,人工智能分类,人工智能自动
+  - DOMAIN,codeload.github.com,GitHub归档自动
+  - DOMAIN-SUFFIX,githubusercontent.com,GitHub内容自动
+  - DOMAIN-SUFFIX,github.com,GitHub核心自动
+  - RULE-SET,GitHub分类,GitHub核心自动
+  - RULE-SET,Google分类,谷歌自动
+  - RULE-SET,学术分类,学术外网自动
+  - RULE-SET,中国域名,DIRECT
+  - GEOIP,CN,DIRECT,no-resolve
+  - MATCH,默认外网自动

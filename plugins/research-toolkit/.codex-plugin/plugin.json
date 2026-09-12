@@ -1,0 +1,21 @@
+{
+  "name": "research-toolkit",
+  "version": "0.1.1",
+  "description": "论文写作、文献检索、实验日志、科学绘图与研究机制分析",
+  "author": {
+    "name": "nnu-sky",
+    "url": "https://github.com/nnu-sky"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "科研工作流",
+    "shortDescription": "论文写作、文献检索、实验日志、科学绘图与研究机制分析",
+    "longDescription": "论文写作、文献检索、实验日志、科学绘图与研究机制分析",
+    "developerName": "nnu-sky",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "根据我的科研任务选择相关技能并完成工作。"
+  },
+  "repository": "https://github.com/nnu-sky/skills",
+  "homepage": "https://github.com/nnu-sky/skills"
+}

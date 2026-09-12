@@ -1,0 +1,5 @@
+# Modified by NNU Sky, 2026-09-12: portable distribution and task-scoped instruction review; see repository THIRD_PARTY_NOTICES.md.
+interface:
+  display_name: "Nature Academic Search"
+  short_description: "Search and verify scholarly literature across sources"
+  default_prompt: "Use $nature-academic-search for the requested literature search, citation audit, or reference-management workflow, verifying the evidence needed for that task."

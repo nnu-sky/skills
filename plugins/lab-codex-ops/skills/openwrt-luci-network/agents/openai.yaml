@@ -1,0 +1,4 @@
+interface:
+  display_name: "本地 OpenWrt 网络"
+  short_description: "诊断本地 Mac、Wi-Fi、OpenWrt、LuCI、DNS 与透明代理链路"
+  default_prompt: "使用 $openwrt-luci-network 判断并处理本机或路由器侧的网络故障。"

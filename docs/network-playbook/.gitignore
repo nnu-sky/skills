@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+backups/
+runtime/
+providers/
+ruleset/
+*.local.yaml
+*.secret.yaml
+*.bak
+__pycache__/
+*.pyc

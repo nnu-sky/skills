@@ -1,0 +1,7 @@
+interface:
+  display_name: "视觉训练配方优化"
+  short_description: "优化视觉分类与表征学习项目并验证提升模型性能的训练方法"
+  default_prompt: "使用 $vision-classification-tuning 分析当前视觉项目并推荐最值得验证的模型性能优化方法。"
+
+policy:
+  allow_implicit_invocation: false

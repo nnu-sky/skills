@@ -1,0 +1,33 @@
+{
+  "name": "vision-classification-tuning",
+  "version": "0.1.1",
+  "description": "显式调用后优化视觉分类与表征学习的训练配方",
+  "author": {
+    "name": "nnu-sky",
+    "url": "https://github.com/nnu-sky"
+  },
+  "homepage": "https://github.com/nnu-sky/skills",
+  "repository": "https://github.com/nnu-sky/skills",
+  "license": "MIT",
+  "keywords": [
+    "pytorch",
+    "vision",
+    "classification",
+    "training",
+    "tuning"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "视觉训练配方优化",
+    "shortDescription": "显式调用后优化视觉分类与表征学习的训练配方",
+    "longDescription": "显式调用后优化视觉分类与表征学习的训练配方",
+    "developerName": "nnu-sky",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "使用 $vision-classification-tuning 分析当前视觉项目并验证训练配方。"
+  }
+}

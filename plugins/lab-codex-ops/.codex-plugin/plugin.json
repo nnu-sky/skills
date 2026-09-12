@@ -1,0 +1,24 @@
+{
+  "name": "lab-codex-ops",
+  "version": "0.1.1",
+  "description": "SSH 运维、服务器网络和本地路由器诊断，连接信息由用户配置",
+  "author": {
+    "name": "nnu-sky",
+    "url": "https://github.com/nnu-sky"
+  },
+  "repository": "https://github.com/nnu-sky/skills",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "服务器与网络",
+    "shortDescription": "SSH 运维、服务器网络和本地路由器诊断，连接信息由用户配置",
+    "longDescription": "SSH 运维、服务器网络和本地路由器诊断，连接信息由用户配置",
+    "developerName": "nnu-sky",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": "处理指定的服务器权限、远程运维或网络诊断任务。"
+  },
+  "homepage": "https://github.com/nnu-sky/skills"
+}

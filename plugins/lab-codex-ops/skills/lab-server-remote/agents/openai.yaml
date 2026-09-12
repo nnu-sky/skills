@@ -1,0 +1,4 @@
+interface:
+  display_name: "实验室服务器连接"
+  short_description: "从当前机器通过 SSH 连接四台实验室服务器并执行远程任务"
+  default_prompt: "使用 $lab-server-remote 连接指定实验室服务器并完成远程任务。"

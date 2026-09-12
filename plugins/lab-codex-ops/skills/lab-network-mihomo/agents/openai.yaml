@@ -1,0 +1,4 @@
+interface:
+  display_name: "实验室网络诊断"
+  short_description: "诊断校园网、DNS、Mihomo、代理和外网访问故障"
+  default_prompt: "使用 $lab-network-mihomo 诊断实验室服务器报告的网络故障。"

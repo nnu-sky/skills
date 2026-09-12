@@ -1,0 +1,6 @@
+interface:
+  display_name: "研究机制与叙事镜头"
+  short_description: "识别机制变量、竞争解释、理论入口、证据边界与可信科研故事"
+  default_prompt: "请使用 $research-mechanism-lens 分析这项研究真正改变了什么，比较竞争解释，并给出可证伪的机制链与最小验证。"
+policy:
+  allow_implicit_invocation: false
