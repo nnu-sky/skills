@@ -10,7 +10,7 @@
 |---|---|---|
 | `gpu-training-infra` | 同名 skill | 用户明确要求时优化模型与训练代码的工程效率 |
 | `vision-classification-tuning` | 同名 skill | 明确点名调用，寻找并验证视觉训练配方 |
-| `research-toolkit` | `ml-paper-writing`、`nature-academic-search`、`nature-experiment-log`、`nature-figure`、`nature-paper-card`、`research-mechanism-lens`、`nature-shared` | 论文、检索、日志、科学图、精读卡、机制分析；共享资料随包安装 |
+| `research-toolkit` | `ml-paper-writing`、`nature-academic-search`、`nature-experiment-log`、`nature-figure`、`nature-paper-card`、`research-mechanism-lens`、`anonymous-code-release`、`nature-shared` | 论文、检索、日志、科学图、精读卡、机制分析、匿名代码发布；共享资料随包安装 |
 | `lab-codex-ops` | `lab-server-remote`、`server-ops`、`lab-network-mihomo`、`openwrt-luci-network` | SSH、跨账号运维、远程服务器网络、本机及路由器网络 |
 
 `nature-shared` 是支持包；`vision-classification-tuning` 与 `research-mechanism-lens` 保留显式调用策略。普通状态查询不触发训练优化。

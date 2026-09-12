@@ -1,7 +1,7 @@
 {
   "name": "research-toolkit",
-  "version": "0.1.1",
-  "description": "论文写作、文献检索、实验日志、科学绘图与研究机制分析",
+  "version": "0.1.2",
+  "description": "论文写作、文献检索、实验日志、科学绘图、研究机制分析与匿名代码发布",
   "author": {
     "name": "nnu-sky",
     "url": "https://github.com/nnu-sky"
@@ -9,8 +9,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "科研工作流",
-    "shortDescription": "论文写作、文献检索、实验日志、科学绘图与研究机制分析",
-    "longDescription": "论文写作、文献检索、实验日志、科学绘图与研究机制分析",
+    "shortDescription": "论文写作、文献检索、实验日志、科学绘图、研究机制分析与匿名代码发布",
+    "longDescription": "论文写作、文献检索、实验日志、科学绘图、研究机制分析与匿名代码发布",
     "developerName": "nnu-sky",
     "category": "Productivity",
     "capabilities": [],
