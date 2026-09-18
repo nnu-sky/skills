@@ -1,7 +1,7 @@
 {
   "name": "gpu-training-infra",
-  "version": "0.1.1",
-  "description": "优化模型及训练代码的工程实现与执行效率",
+  "version": "0.1.1+codex.20260918080526",
+  "description": "\u4f18\u5316\u6a21\u578b\u53ca\u8bad\u7ec3\u4ee3\u7801\u7684\u5de5\u7a0b\u5b9e\u73b0\u4e0e\u6267\u884c\u6548\u7387",
   "author": {
     "name": "nnu-sky",
     "url": "https://github.com/nnu-sky"
@@ -18,9 +18,9 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "模型工程优化",
-    "shortDescription": "优化模型及训练代码的工程实现与执行效率",
-    "longDescription": "仅在明确要求模型工程优化时使用，按实测结果改进训练代码。",
+    "displayName": "\u6a21\u578b\u5de5\u7a0b\u4f18\u5316",
+    "shortDescription": "\u4f18\u5316\u6a21\u578b\u53ca\u8bad\u7ec3\u4ee3\u7801\u7684\u5de5\u7a0b\u5b9e\u73b0\u4e0e\u6267\u884c\u6548\u7387",
+    "longDescription": "\u5feb\u901f\u626b\u63cf\u6267\u884c\u3001\u6570\u5b66\u3001\u6210\u719f\u5b9e\u73b0\u4e0e\u7b97\u6cd5\u6d41\u7a0b\u56db\u4e2a\u65b9\u5411\uff0c\u4ece\u4e3b\u8981\u8017\u65f6\u8def\u5f84\u4e2d\u7684\u7b80\u5355\u6709\u6548\u6539\u52a8\u5f00\u59cb\uff0c\u6309\u5b9e\u6d4b\u7ed3\u679c\u6301\u7eed\u8fed\u4ee3\u3002",
     "developerName": "nnu-sky",
     "category": "Developer Tools",
     "capabilities": [
@@ -28,6 +28,6 @@
       "Read",
       "Write"
     ],
-    "defaultPrompt": "使用 $gpu-training-infra 对模型及训练代码进行工程优化。"
+    "defaultPrompt": "\u4f7f\u7528 $gpu-training-infra \u626b\u63cf\u56db\u4e2a\u4f18\u5316\u65b9\u5411\uff0c\u4f18\u5148\u5904\u7406\u4e3b\u8981\u8017\u65f6\uff0c\u4ece\u7b80\u5355\u6709\u6548\u7684\u6539\u52a8\u5f00\u59cb\u6301\u7eed\u8fed\u4ee3\u5e76\u9a8c\u8bc1\u6536\u76ca\u3002"
   }
 }
