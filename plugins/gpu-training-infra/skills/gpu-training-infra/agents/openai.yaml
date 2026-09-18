@@ -1,4 +1,4 @@
 interface:
   display_name: "模型工程优化"
   short_description: "从执行、数学、成熟实现与算法流程四个方向持续优化模型训练效率"
-  default_prompt: "使用 $gpu-training-infra 快速扫描当前模型的四个优化方向，从主要耗时路径中的简单有效改动开始，持续迭代验证并简要报告收益与停止依据。"
+  default_prompt: "使用 $gpu-training-infra 快速扫描四个方向，默认重点迭代执行效率与等价去重，从主要耗时中的简单有效改动开始，按剩余收益决定深度探索并报告验证范围。"
