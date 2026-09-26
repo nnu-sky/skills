@@ -15,6 +15,24 @@
 
 `nature-shared` 是支持包；`vision-classification-tuning` 与 `research-mechanism-lens` 保留显式调用策略。普通状态查询不触发训练优化。
 
+## 给科研朋友的推荐组合
+
+主要需要训练工程优化、论文写作和论文画图时，安装这三个技能即可，共享资料会自动带上：
+
+```bash
+git clone https://github.com/nnu-sky/skills.git
+cd skills
+python3 scripts/install_skills.py --skill gpu-training-infra --skill ml-paper-writing --skill nature-figure
+```
+
+保留这个仓库目录；安装建立的是符号链接。更新时在仓库内运行 `git pull --ff-only`，然后开启新任务。也可以从 GitHub 下载 ZIP、解压后运行安装命令；ZIP 安装需要手动下载新版更新。
+
+- **工程优化**：本仓库维护的迭代版本。按实际耗时、调用频率、预期收益及实现成本选择候选；短测后保留有效改动，重测瓶颈并继续，达到目标或剩余收益不足时结束。
+- **论文写作**：围绕科学问题、机制与发现组织正文，实验设置集中到协议；避免重复说明和防御性注释。
+- **论文画图**：按科学问题设计图与子图，保留项目的 Python/R 后端，检查最终尺寸下的字体、标注与排版。
+
+见 [三个使用示例](docs/research-starter-examples.md)。这些是交给 Codex 的任务示例；技能提供工作方法，实际效果需要在使用者的项目中验证。
+
 ## 安装
 
 需要 Git；独立技能安装需要 Python 3.9+。把仓库放在一个长期保留的目录：

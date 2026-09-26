@@ -10,135 +10,44 @@ metadata:
 
 # ML Paper Writing
 
-## Purpose
+## Goal and principles
 
-Turn verified research artifacts into a clear, defensible paper. The paper must present one coherent contribution, connect every major claim to evidence, and remain honest about scope and uncertainty.
+Write a coherent scientific argument supported by verified evidence. Apply these principles before drafting and during local revisions; an internal verification process is not a manuscript outline.
 
-## Non-negotiable rules
+- Organize prose around the question, mechanism, method, findings, and significance. Choose each paragraph's role before its details; avoid execution chronology and code-step narration.
+- Ground claims in source data, proofs, code, primary references, or user-provided evidence. Distinguish observations, deductions, and hypotheses; preserve mixed findings and never invent results or references.
+- Include details that change scientific interpretation. Centralize reproduction settings in the experimental protocol, keep execution records in artifacts, and delete redundant prose rather than automatically moving it to the appendix.
+- Express boundaries through accurately scoped claims. Retain necessary assumptions and controls, but explain consequential limitations once rather than repeatedly defending against hypothetical objections.
+- Give text and displays distinct roles. Results explain patterns and meaning; captions explain the display; Discussion develops implications. Avoid repeating tables, contributions, or qualifications across them.
+- Preserve the user's task scope, existing notation, source structure, and valid template. Follow current official venue requirements when relevant; bundled examples are not current submission authority.
+- Verify citations against primary sources; never generate BibTeX from memory. Mark unresolved references explicitly. By default, omit displayed bibliography URLs while preserving verification metadata and requested code/data links; follow an explicit user or venue requirement when it differs.
 
-- Ground claims in the repository, experiment records, proofs, source data, or user-provided evidence. Never invent results, settings, comparisons, citations, or implementation details.
-- Treat the current official venue author guide and style package as the source of truth. Bundled templates and checklist references are snapshots, not proof of current requirements.
-- Never create BibTeX from memory. Discover papers broadly, verify metadata and the attributed claim, then retrieve citation data from an authoritative source.
-- Distinguish demonstrated results, derived conclusions, hypotheses, and planned experiments. Do not turn mixed, approximately preserved, or single-seed evidence into significance, equivalence, or general improvement claims.
-- Draft proactively when the evidence and target are clear. Ask only when an unresolved choice would materially change the contribution, protocol, venue, or cost.
-- Preserve the user's existing source, template, notation, and project structure unless a change is required for the requested deliverable.
+## Task routing
 
-## Progressive routing
+Read only resources needed for the requested work and reuse unchanged guidance already loaded. A simple local edit can use the principles above without opening every reference.
 
-Load only the material needed for the current task. Do not open every reference by default.
-
-| Task | Load |
+| Task | Resource |
 | --- | --- |
-| Frame a contribution, outline a paper, draft or rewrite sections, or polish prose | [writing-guide.md](references/writing-guide.md) |
-| Find related work, verify citations, or maintain BibTeX | [citation-workflow.md](references/citation-workflow.md) |
-| Check submission requirements, anonymization, disclosures, ethics, limitations, or reproducibility | [checklists.md](references/checklists.md), then the current official venue guide |
-| Simulate reviewers, audit acceptance risks, prepare rebuttals, or respond to reviews | [reviewer-guidelines.md](references/reviewer-guidelines.md) |
-| Verify the provenance of this skill's writing guidance | [sources.md](references/sources.md) |
-| Start from a bundled LaTeX example | [templates/README.md](templates/README.md), but only after confirming venue and year against the official package |
-| Create or revise publication figures | Use `nature-figure` when available; do not load figure-design material here as a substitute |
+| Frame a contribution, outline, or substantially draft/revise sections | [writing-guide.md](references/writing-guide.md) |
+| Resolve report-like prose, repetition, or defensive wording | [narrative-cleanup.md](references/narrative-cleanup.md): short self-check and examples |
+| Find or verify citations; maintain bibliographic records | [citation-workflow.md](references/citation-workflow.md) |
+| Check submission requirements, anonymity, disclosures, or reproducibility | [checklists.md](references/checklists.md), then the current official venue guide |
+| Review acceptance risks, draft rebuttals, or respond to reviews | [reviewer-guidelines.md](references/reviewer-guidelines.md) |
+| Check the provenance of writing guidance | [sources.md](references/sources.md) |
+| Use a bundled LaTeX example | [templates/README.md](templates/README.md); confirm venue and year |
+| Create or revise scientific figures | Use `nature-figure` when available |
 
-For a complete-paper task, start with `writing-guide.md`; add the citation, venue, or reviewer reference only when that stage begins. For a narrow section edit, load only `writing-guide.md`. For citation-only work, load only `citation-workflow.md`.
+## Working approach
 
-## Core workflow
+1. **Read relevant material.** Inspect the requested text and the evidence needed to understand it. Reuse existing results, scripts, and project conventions; avoid broad repository audits for local prose edits.
+2. **Identify the argument.** Clarify the claim, supporting evidence, and paragraph or section role. Write a separate claim–evidence map only when sources are dispersed, the argument is complex, or the user requests one. Choose the drafting order to suit the task.
+3. **Revise within scope.** Use the strongest wording supported by the evidence. Ask only when uncertainty materially changes the argument or assignment. Keep internal verification details out of the paper unless they help readers interpret the result.
+4. **Check what changed.** For numbers, check the source and statistical meaning; for theory, assumptions and scope; for experimental comparisons, relevant settings and consequential differences. Reuse unchanged verified evidence. Update affected citations, labels, protocols, and cross-references when moving or removing material.
 
-### 1. Establish the evidence base
+## Completion
 
-Read the project rules and only the artifacts relevant to the requested paper work:
+Check the revised scope for scientific purpose, necessary detail, repeated qualifications, and duplication between prose and displays. Use the narrative reference when examples help; a local edit does not require a full-paper review.
 
-- README, research log, existing draft, and contribution notes;
-- method implementation and configuration needed to describe the approach;
-- final tables, source data, logs, proofs, and evaluation protocol supporting claims;
-- bibliography and already cited papers;
-- target venue and submission stage.
+When delivering an edited PDF, compile and inspect affected pages and adjacent reflow for unresolved references, overflow, and readable figures or tables. Apply submission checks only when the request or changes involve them; preserve a valid existing template.
 
-Prefer existing scripts, tables, figure sources, and reusable paper structure. Do not create near-duplicate experiment or manuscript pipelines when parameters or content can be expressed through the existing one.
-
-### 2. Build a claim-evidence map
-
-Before substantial drafting, record:
-
-- the one-sentence contribution;
-- two to four specific supporting claims;
-- the evidence artifact for each claim;
-- the closest baseline or prior work;
-- known limitations and unsupported claims that must not enter the paper.
-
-If framing is uncertain, choose the best evidence-supported framing, state the assumption, and continue drafting. Ask the user only when competing framings would materially change the work.
-
-### 3. Design the narrative
-
-The introduction should make three elements clear:
-
-- **What:** the precise new result, method, diagnosis, theorem, or empirical finding;
-- **Why:** the evidence that establishes it;
-- **So what:** why the result matters to the target community.
-
-Organize experiments around claims, not around the order in which runs happened. Organize related work by technical distinction, not as a paper-by-paper list.
-
-### 4. Draft in reviewer reading order
-
-A useful default order is:
-
-1. one-sentence contribution and title direction;
-2. Figure 1 or the central evidence layout;
-3. abstract;
-4. introduction and contribution bullets;
-5. method or theory;
-6. experiments and limitations;
-7. related work;
-8. appendix, reproducibility, and required disclosures.
-
-This order is a default, not a rigid template. Reuse a strong existing manuscript structure when one is already present.
-
-### 5. Audit every claim
-
-For each quantitative or comparative statement, verify:
-
-- the source artifact exists and matches the manuscript number;
-- the metric direction, unit, aggregation, hardware, seed count, and protocol are stated correctly;
-- comparisons are fair or explicitly labeled as published or non-matched;
-- uncertainty language matches the available evidence;
-- theory assumptions and theorem scope are visible before the claim is used.
-
-### 6. Verify citations
-
-When Exa MCP is available, use it for discovery, not as the sole authority. For every citation:
-
-1. identify the intended paper unambiguously;
-2. confirm it in at least two appropriate sources when practical, such as the publisher or DOI record plus arXiv, Crossref, Semantic Scholar, OpenAlex, or the official proceedings;
-3. inspect the paper to verify the attributed claim;
-4. retrieve BibTeX or authoritative metadata programmatically;
-5. add the entry with a consistent key and compile-check it.
-
-If verification fails, use an explicit `[CITATION NEEDED]` or clearly marked placeholder and tell the user. Do not silently substitute a different paper.
-
-### 7. Apply venue requirements after content decisions
-
-- Fetch the current author guide and official style package for the target year.
-- Copy the complete official template rather than merging preambles or editing style files.
-- Check page limits, anonymity, supplementary rules, disclosure, checklist, ethics, limitations, and reproducibility requirements.
-- Treat bundled templates as reusable examples only when they exactly match the target venue and year.
-- Compile from a clean environment and inspect the rendered PDF, references, figures, fonts, overfull boxes, unresolved citations, and placeholders.
-
-## Section quality gates
-
-- **Abstract:** states the result, motivation, approach, evidence, and strongest defensible takeaway without a generic opening.
-- **Introduction:** exposes the problem, gap, insight, contribution bullets, and evidence preview early.
-- **Method or theory:** defines notation and assumptions; provides enough detail to reproduce or verify the contribution.
-- **Experiments:** states which claim each experiment tests; documents protocol, baselines, seeds, uncertainty, compute, and selection rules.
-- **Related work:** explains technical differences and claim boundaries; citations are verified.
-- **Limitations:** states where conclusions do not apply and which evidence is missing.
-- **Figures and tables:** use source data, consistent precision, metric directions, self-contained captions, and editable or vector formats when appropriate.
-
-## Delivery
-
-For a writing or revision task, report:
-
-- the paper or source files changed;
-- the contribution framing used;
-- major evidence and citation decisions;
-- unresolved placeholders or unsupported claims;
-- venue and template status;
-- compilation and visual-QA result when a PDF is part of the deliverable.
-
-Stop once the requested manuscript outcome is supported and verified. Do not expand into unrelated experiments, exhaustive literature collection, or infrastructure work unless new evidence shows it is necessary.
+Report the actual changes, relevant verification, and any unresolved issue that affects the result. Do not require a full contribution, citation, or venue-status report for a small edit. Stop when the requested outcome is complete; do not expand into unrelated experiments or infrastructure.

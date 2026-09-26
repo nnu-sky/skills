@@ -8,6 +8,7 @@ This reference provides a complete workflow for managing citations programmatica
 
 ## Contents
 
+- [Bibliography URL presentation](#bibliography-url-presentation)
 - [Why Citation Verification Matters](#why-citation-verification-matters)
 - [Citation APIs Overview](#citation-apis-overview)
 - [Verified Citation Workflow](#verified-citation-workflow)
@@ -17,6 +18,16 @@ This reference provides a complete workflow for managing citations programmatica
 - [Troubleshooting](#troubleshooting)
 
 ---
+
+## Bibliography URL presentation
+
+By default, omit displayed URLs from the manuscript reference list while preserving source-verification metadata. Follow the author's chosen bibliography style and venue requirements when they differ.
+
+- Preserve verified URL fields in the source bibliography and provenance records. Suppress their rendered output through the bibliography configuration rather than deleting metadata.
+- Check the compiled reference list: imported `note` or `howpublished` fields can print URLs even when the `url` field is suppressed.
+- Keep bibliographic identifiers such as DOI and arXiv IDs; they need not be printed as web addresses. Separately requested code/data availability links in the main text or footnotes remain unaffected.
+- If an explicit venue requirement or a web-only source requires a locator, flag that specific exception rather than silently omitting information necessary to identify the source. Follow current explicit author instructions when they change this preference.
+- Do not apply this manuscript formatting rule to source links in research reports or assistant responses.
 
 ## Why Citation Verification Matters
 

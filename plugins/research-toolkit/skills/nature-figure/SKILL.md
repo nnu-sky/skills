@@ -13,12 +13,13 @@ description: >-
 
 # Nature Figure Making — Router
 
-This skill is split into two layers:
+Load the core and relevant backend resources for a new task. Reuse unchanged guidance on follow-ups; read more only when needed.
 
-- A **static layer** under `static/` that holds versioned, reusable content fragments (the figure contract and default stance, plus a per-backend quick-start for Python and R).
-- A **dynamic layer** (this file plus `manifest.yaml`) that detects the plotting backend and loads only the fragment needed for the current job. The large design, API, pattern, and QA material lives in on-demand references.
+## Scientific role and caption scope
 
-Load the relevant core and selected fragments on first use. Reuse already loaded guidance in the same task; reread only changed or missing sections.
+- State the scientific question each figure answers. Merge or remove figures or panels that add no distinct evidence; preserve conflicting results and necessary controls.
+- Keep captions focused on the result or comparison and definitions required to read the figure correctly. Cite the centralized protocol rather than repeating hardware, seeds, or execution settings unless they affect interpretation.
+- Check whether text, legends, arrows, and markers redundantly encode the same information. Remove annotations without an independent explanatory role; retain essential units, uncertainty definitions, and comparison boundaries.
 
 ## Routing protocol
 
@@ -107,13 +108,6 @@ The files under `references/` are deep references, not defaults. Open them on de
 
 Do not infer flagship Nature or NMI requirements from a Nature Communications
 corpus or from the visual-style examples in this skill.
-
-## Why this split
-
-- The static layer is versioned and reviewable. The backend gate is now explicit in the manifest rather than buried in prose.
-- The dynamic layer keeps each invocation cheap: only the selected backend's quick-start enters context, and the 2,600+ lines of reference depth load only when a step needs them.
-- The router itself is short on purpose. Update fragments and references, not this file, when adding scope.
-- This structure mirrors `nature-writing`, `nature-polishing`, `nature-reader`, and `nature-paper2ppt`.
 
 ## Resource paths
 

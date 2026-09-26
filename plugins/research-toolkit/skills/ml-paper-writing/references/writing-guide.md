@@ -8,6 +8,7 @@ This reference compiles writing advice from prominent ML researchers including N
 
 - [The Narrative Principle](#the-narrative-principle)
 - [Time Allocation](#time-allocation)
+- [Section Roles and Quality](#section-roles-and-quality)
 - [Abstract Writing Formula](#abstract-writing-formula)
 - [Introduction Structure](#introduction-structure)
 - [Sentence-Level Clarity](#sentence-level-clarity)
@@ -65,6 +66,17 @@ Studies of reviewer behavior show:
 **Implication**: Front-load your paper's value. Don't bury the contribution.
 
 ---
+
+## Section roles and quality
+
+- **Abstract:** states the result, motivation, approach, evidence, and strongest defensible takeaway without a generic opening.
+- **Introduction:** exposes the problem, gap, insight, contribution bullets, and evidence preview early.
+- **Method or theory:** defines notation and assumptions; provides enough detail to reproduce or verify the contribution.
+- **Experiments:** explains comparison logic, critical controls, findings, and claim scope in the main text; centralizes reproducibility details in the protocol rather than repeating them in prose and captions.
+- **Related work:** explains technical differences and claim boundaries; citations are verified.
+- **Limitations:** states where conclusions do not apply and which evidence is missing.
+- **Figures and tables:** use source data, consistent precision, metric directions, captions sufficient for correct interpretation without reproducing the full protocol, and editable or vector formats when appropriate.
+
 
 ## Abstract Writing Formula
 
@@ -380,7 +392,7 @@ Figures should tell a coherent story even if the reader skips the text. Many rea
 ### Design Principles
 
 1. **Figure 1 is crucial**: Often the first thing readers examine after abstract
-2. **Self-contained captions**: Reader should understand figure without main text
+2. **Interpretably self-contained figures**: The figure and caption provide what is needed to read the result correctly; shared experimental protocols belong in their central location.
 3. **No title inside figure**: The caption serves this function (ICML/NeurIPS rule)
 4. **Vector graphics**: PDF/EPS for plots, PNG (600 DPI) only for photographs
 
@@ -434,7 +446,7 @@ plt.style.use(['science', 'nature'])
 | Raster graphics for plots | Use vector (PDF/EPS) |
 | Red-green color scheme | Use colorblind-safe palette |
 | Title inside figure | Put title in caption |
-| Captions require main text | Make captions self-contained |
+| Captions omit essential reading definitions or repeat protocols | Supply the needed definitions; reference the shared protocol |
 
 ### Citation Mistakes
 
@@ -467,7 +479,7 @@ Before submitting, verify:
 - [ ] Consistent terminology throughout
 - [ ] No generic opening sentences
 - [ ] Hedging removed unless necessary
-- [ ] All figures have self-contained captions
+- [ ] Figures and captions support correct interpretation without duplicating full protocols
 
 **Technical**:
 - [ ] All citations verified via API
