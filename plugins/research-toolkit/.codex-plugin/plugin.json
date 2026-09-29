@@ -1,20 +1,20 @@
 {
   "name": "research-toolkit",
-  "version": "0.1.2+codex.20260926040732",
-  "description": "论文写作、文献检索、实验日志、科学绘图、研究机制分析与匿名代码发布",
+  "version": "0.1.2+codex.20260929011914",
+  "description": "\u8bba\u6587\u5199\u4f5c\u3001\u6587\u732e\u68c0\u7d22\u3001\u5b9e\u9a8c\u65e5\u5fd7\u3001\u79d1\u5b66\u7ed8\u56fe\u3001\u7814\u7a76\u673a\u5236\u5206\u6790\u4e0e\u533f\u540d\u4ee3\u7801\u53d1\u5e03",
   "author": {
     "name": "nnu-sky",
     "url": "https://github.com/nnu-sky"
   },
   "skills": "./skills/",
   "interface": {
-    "displayName": "科研工作流",
-    "shortDescription": "论文写作、文献检索、实验日志、科学绘图、研究机制分析与匿名代码发布",
-    "longDescription": "论文写作、文献检索、实验日志、科学绘图、研究机制分析与匿名代码发布",
+    "displayName": "\u79d1\u7814\u5de5\u4f5c\u6d41",
+    "shortDescription": "\u8bba\u6587\u5199\u4f5c\u3001\u6587\u732e\u68c0\u7d22\u3001\u5b9e\u9a8c\u65e5\u5fd7\u3001\u79d1\u5b66\u7ed8\u56fe\u3001\u7814\u7a76\u673a\u5236\u5206\u6790\u4e0e\u533f\u540d\u4ee3\u7801\u53d1\u5e03",
+    "longDescription": "\u8bba\u6587\u5199\u4f5c\u3001\u6587\u732e\u68c0\u7d22\u3001\u5b9e\u9a8c\u65e5\u5fd7\u3001\u79d1\u5b66\u7ed8\u56fe\u3001\u7814\u7a76\u673a\u5236\u5206\u6790\u4e0e\u533f\u540d\u4ee3\u7801\u53d1\u5e03",
     "developerName": "nnu-sky",
     "category": "Productivity",
     "capabilities": [],
-    "defaultPrompt": "根据我的科研任务选择相关技能并完成工作。"
+    "defaultPrompt": "\u6839\u636e\u6211\u7684\u79d1\u7814\u4efb\u52a1\u9009\u62e9\u76f8\u5173\u6280\u80fd\u5e76\u5b8c\u6210\u5de5\u4f5c\u3002"
   },
   "repository": "https://github.com/nnu-sky/skills",
   "homepage": "https://github.com/nnu-sky/skills"

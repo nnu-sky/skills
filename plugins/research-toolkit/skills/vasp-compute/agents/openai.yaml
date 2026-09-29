@@ -1,0 +1,4 @@
+interface:
+  display_name: "VASP 计算与优化"
+  short_description: "准备和检查 VASP 输入，诊断计算问题，调研并验证组合加速方案"
+  default_prompt: "使用 $vasp-compute 结合我的结构、计算目标和执行环境，完成 VASP 参数检查或有依据的性能优化。"
