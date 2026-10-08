@@ -17,21 +17,29 @@
 
 ## 给科研朋友的推荐组合
 
-主要需要训练工程优化、论文写作和论文画图时，安装这三个技能即可，共享资料会自动带上：
+一般科研用户推荐先安装论文写作、科研画图和文献检索这三个技能，共享资料会自动带上：
 
 ```bash
 git clone https://github.com/nnu-sky/skills.git
 cd skills
-python3 scripts/install_skills.py --skill gpu-training-infra --skill ml-paper-writing --skill nature-figure
+python3 scripts/install_skills.py --skill ml-paper-writing --skill nature-figure --skill nature-academic-search
 ```
 
 保留这个仓库目录；安装建立的是符号链接。更新时在仓库内运行 `git pull --ff-only`，然后开启新任务。也可以从 GitHub 下载 ZIP、解压后运行安装命令；ZIP 安装需要手动下载新版更新。
 
-- **工程优化**：本仓库维护的迭代版本。按实际耗时、调用频率、预期收益及实现成本选择候选；短测后保留有效改动，重测瓶颈并继续，达到目标或剩余收益不足时结束。
 - **论文写作**：围绕科学问题、机制与发现组织正文，实验设置集中到协议；避免重复说明和防御性注释。
 - **论文画图**：按科学问题设计图与子图，保留项目的 Python/R 后端，检查最终尺寸下的字体、标注与排版。
+- **文献检索**：多来源寻找相关工作、核对引用和整理文献文件；不编造引用。
 
-见 [三个使用示例](docs/research-starter-examples.md)。这些是交给 Codex 的任务示例；技能提供工作方法，实际效果需要在使用者的项目中验证。
+做深度学习训练时，可额外安装 `gpu-training-infra`；做计算化学时，可额外安装 `vasp-compute`。
+
+见 [使用示例](docs/research-starter-examples.md)。这些是交给 Codex 的任务示例；技能提供工作方法，实际效果需要在使用者的项目中验证。
+
+## 全局 AGENTS.md
+
+可参考 [全局 Agent 指令](docs/AGENTS.global.md)，约定沟通、执行、代码复用、验证和子代理协作。按自己的语言和科研习惯调整后，可保存到 `${CODEX_HOME:-~/.codex}/AGENTS.md`；已有全局规则时合并适用条款。技能安装脚本不会自动应用这份文档。
+
+仓库根目录的 `AGENTS.md` 用于维护本仓库。全局文档来自个人配置仓库；更新时同步此分享副本。
 
 ## 安装
 
