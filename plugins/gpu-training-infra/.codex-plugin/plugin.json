@@ -1,6 +1,6 @@
 {
   "name": "gpu-training-infra",
-  "version": "0.1.1+codex.20260918083329",
+  "version": "0.1.2+codex.20261009",
   "description": "\u4f18\u5316\u6a21\u578b\u53ca\u8bad\u7ec3\u4ee3\u7801\u7684\u5de5\u7a0b\u5b9e\u73b0\u4e0e\u6267\u884c\u6548\u7387",
   "author": {
     "name": "nnu-sky",
