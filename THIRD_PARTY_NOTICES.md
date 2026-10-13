@@ -17,3 +17,18 @@ NNU Sky modifications (2026-09-12) concern task scope, progressive loading, GPT-
 Personal credentials, host addresses, machine-specific secret storage details, `.git` history from private repositories and compiled Python caches are excluded from the public distribution.
 
 License source commits: Nature `c4e4c99fbeaf0168cda090f8739e1508017a610e`; Orchestra `773a52944ba4747a18bd4ae9ade53fff041adcbc`. Original license texts are reproduced without modification.
+
+On 2026-10-13, selected correctness fixes and regression tests were merged from
+[Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills), reviewed at
+`473e8d7b1b918fe37208d3a5e143a3ac9af4c91b`. The source commits are
+`cfe9e5c2b95633aee4677c69fd4be524f5e96dd5`,
+`4e4b4bdf5e4d114403491c0cbe3d4e100b6153f2`,
+`afb69116b612d1ce2d7c133f8797480bf2b0a39e`,
+`e605b35611ab2849af46d0cf7831aefdcf85be07` (academic-search parsing and conversion),
+`5b05fe1ba3867b61ee2742a060d5cf05dad027a2`,
+`9e10be27c8bd11f1738ffade0d10ef93a50a6d07` (figure audits and output handling), and
+`e25620c4eb9544b83f2fc45c3255c83a2532a7cc` (shared consistency checks).
+Local skill instructions, invocation policies, plotting-backend selection and
+XML dependencies were preserved. This is a selective merge, not a claim that
+the distribution matches the entire upstream tree. The license source commits
+above remain the original license provenance.

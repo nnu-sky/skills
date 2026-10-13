@@ -79,7 +79,8 @@ def _parse_article(article: ET.Element) -> dict[str, Any]:
 
     # Title
     title_el = art.find("ArticleTitle")
-    title = title_el.text.strip() if title_el is not None and title_el.text else ""
+    # itertext() keeps text after inline markup such as <i>...</i>; .text stops at the first child.
+    title = " ".join("".join(title_el.itertext()).split()) if title_el is not None else ""
 
     # Authors
     authors: list[str] = []

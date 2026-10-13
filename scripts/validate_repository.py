@@ -2,10 +2,19 @@
 """Validate portable skill entrypoints, manifests and concrete relative Markdown links."""
 import json
 import re
+import subprocess
 from pathlib import Path
 import yaml
 
 root = Path(__file__).resolve().parents[1]
+if (root / '.git').exists():
+    listing = subprocess.run(
+        ['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z'],
+        cwd=root, check=True, capture_output=True,
+    )
+    files = [root / name for name in listing.stdout.decode().split('\0') if name]
+else:
+    files = list(root.rglob('*'))
 errors = []
 market = json.loads((root/'.agents/plugins/marketplace.json').read_text())
 count = 0
@@ -33,13 +42,14 @@ for entry in market['plugins']:
             data = yaml.safe_load(routing.read_text())
             for relative in data.get('always_load', []):
                 if not (p.parent/relative).exists(): errors.append(f'Missing core: {routing}: {relative}')
-for p in root.rglob('*.md'):
+for p in files:
+    if p.suffix != '.md' or not p.is_file(): continue
     for dest in re.findall(r'\]\(([^)]+)\)', p.read_text(errors='replace')):
         dest = dest.split('#')[0].strip('<>')
         if not dest or '://' in dest or dest.startswith(('mailto:', '#', '<')) or ' ' in dest:
             continue
         if not (p.parent/dest).exists(): errors.append(f'Missing link: {p.relative_to(root)} -> {dest}')
-for p in root.rglob('*'):
+for p in files:
     if '.git' in p.parts: continue
     if p.is_file() and (p.suffix == '.pyc' or '__pycache__' in p.parts): errors.append(f'Cache in distribution: {p}')
 if errors:
