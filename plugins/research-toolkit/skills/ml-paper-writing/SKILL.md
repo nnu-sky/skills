@@ -1,6 +1,6 @@
 ---
 name: ml-paper-writing
-description: Write, revise, and audit publication-ready ML/AI papers for NeurIPS, ICML, ICLR, ACL, AAAI, and COLM. Use for research-repository grounding, contribution framing, section drafting, citation verification, venue compliance, rebuttals, and camera-ready preparation.
+description: Use when the current task is to write, revise, or review an ML/AI manuscript, develop its outline or contribution argument, verify its citations or submission requirements, or prepare a rebuttal or camera-ready version.
 license: MIT
 metadata:
   version: 1.2.0-local.1
